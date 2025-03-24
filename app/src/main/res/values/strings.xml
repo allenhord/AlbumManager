@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Content_Provider_In_Android</string>
+    <string name="hintText1">Enter Artist Name</string>
+    <string name="hintText2">Enter Album Name</string>
+    <string name="heading">Content Provider In Android</string>
+    <string name="insertButtontext">Insert Data</string>
+    <string name="loadButtonText">Load Data</string>
+</resources>
