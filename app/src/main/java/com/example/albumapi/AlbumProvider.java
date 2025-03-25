@@ -18,10 +18,10 @@ public class AlbumProvider extends ContentProvider {
     }
 
     // defining authority so that other application can access it
-    static final String PROVIDER_NAME = "com.demo.user.provider";
+    static final String PROVIDER_NAME = "com.demo.album.provider";
 
     // defining content URI
-    static final String URL = "content://" + PROVIDER_NAME + "/users";
+    static final String URL = "content://" + PROVIDER_NAME + "/albums";
 
     // parsing the content URI
     static final Uri CONTENT_URI = Uri.parse(URL);
@@ -40,17 +40,17 @@ public class AlbumProvider extends ContentProvider {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
         // to access whole table
-        uriMatcher.addURI(PROVIDER_NAME, "users", uriCode);
+        uriMatcher.addURI(PROVIDER_NAME, "albums", uriCode);
 
         // to access a particular row
         // of the table
-        uriMatcher.addURI(PROVIDER_NAME, "users/*", uriCode);
+        uriMatcher.addURI(PROVIDER_NAME, "albums/*", uriCode);
     }
     @Override
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)) {
             case uriCode:
-                return "vnd.android.cursor.dir/users";
+                return "vnd.android.cursor.dir/albums";
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
         }
@@ -122,10 +122,10 @@ public class AlbumProvider extends ContentProvider {
     private SQLiteDatabase db;
 
     // declaring name of the database
-    static final String DATABASE_NAME = "UserDB";
+    static final String DATABASE_NAME = "AlbumDB";
 
     // declaring table name of the database
-    static final String TABLE_NAME = "Users";
+    static final String TABLE_NAME = "Albums";
 
     // declaring version of the database
     static final int DATABASE_VERSION = 1;

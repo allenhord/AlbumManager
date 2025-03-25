@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         // creating a cursor object of the
         // content URI
-        Cursor cursor = getContentResolver().query(Uri.parse("content://com.demo.user.provider/users"), null, null, null, null);
+        Cursor cursor = getContentResolver().query(Uri.parse("content://com.demo.album.provider/albums"), null, null, null, null);
 
         // iteration of the cursor
         // to print whole table
