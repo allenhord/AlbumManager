@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AlbumAPI"
+rootProject.name = "AlbumManager"
 include ':app'
