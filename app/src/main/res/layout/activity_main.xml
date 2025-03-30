@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/"
             android:text="@string/heading"
             android:textAlignment="center"
@@ -35,21 +35,94 @@
             android:textSize="36sp"
             android:textStyle="bold" />
 
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/idInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Album ID"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/artistInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Artist Name"
+            android:inputType="text"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Album Name"
+            android:inputType="text"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black" />
+
+        <!-- Operation Buttons -->
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#4CAF50"
+            android:onClick="onClickAddDetails"
+            android:text="Add Album"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2196F3"
+            android:onClick="onClickUpdateDetails"
+            android:text="Update Album"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#F44336"
+            android:onClick="onClickDeleteDetails"
+            android:text="Delete Album"
+            android:textColor="#FFFFFF" />
+
         <Button
             android:id="@+id/loadButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:background="#4CAF50"
             android:onClick="onClickShowDetails"
             android:text="@string/loadButtonText"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/res"
@@ -71,7 +144,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
