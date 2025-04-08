@@ -3,6 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.albummanager">
 
+    <!-- Define the permissions -->
+    <permission
+        android:name="com.example.albummanager.provider.READ"
+        android:label="Read Album Provider"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.example.albummanager.provider.WRITE"
+        android:label="Write Album Provider"
+        android:protectionLevel="normal" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,19 +21,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light"
+        android:theme="@style/Theme.AlbumManager"
         tools:targetApi="31">
         <provider
             android:name=".AlbumProvider"
             android:authorities="com.example.albummanager.provider"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:readPermission="com.example.albummanager.provider.READ"
+            android:writePermission="com.example.albummanager.provider.WRITE"/>
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
